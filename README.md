@@ -32,13 +32,13 @@ Click on ```Open``` in PyCharm to browse to your generated SDK directory and the
 
 The project files will be displayed in the side bar as follows:
 
-![Open project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=openProject1&workspaceFolder=RaaSV2-Python&projectName=raas-v2)     
+![Open project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=openProject1&workspaceFolder=RaaSV2-Python&projectName=raas_v2)     
 
 ### 2. Add a new Test Project
 
 Create a new directory by right clicking on the solution name as shown below:
 
-![Add a new project in PyCharm - Step 1](https://apidocs.io/illustration/python?step=createDirectory&workspaceFolder=RaaSV2-Python&projectName=raas-v2)
+![Add a new project in PyCharm - Step 1](https://apidocs.io/illustration/python?step=createDirectory&workspaceFolder=RaaSV2-Python&projectName=raas_v2)
 
 Name the directory as "test"
 
@@ -46,7 +46,7 @@ Name the directory as "test"
    
 Add a python file to this project with the name "testsdk"
 
-![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=createFile&workspaceFolder=RaaSV2-Python&projectName=raas-v2)
+![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=createFile&workspaceFolder=RaaSV2-Python&projectName=raas_v2)
 
 Name it "testsdk"
 
@@ -55,10 +55,10 @@ Name it "testsdk"
 In your python file you will be required to import the generated python library using the following code lines
 
 ```Python
-from raas-v2.raasv2_client import *
+from raas_v2.raasv2_client import *
 ```
 
-![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=RaaSV2-Python&libraryName=raas-v2.raasv2_client&projectName=raas-v2)
+![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=RaaSV2-Python&libraryName=raas_v2.raasv2_client&projectName=raas_v2)
 
 After this you can write code to instantiate an API client object, get a controller object and  make API calls. Sample code is given in the subsequent sections.
 
@@ -66,7 +66,7 @@ After this you can write code to instantiate an API client object, get a control
 
 To run the file within your test project, right click on your Python file inside your Test project and click on ```Run```
 
-![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=RaaSV2-Python&libraryName=raas-v2.raasv2_client&projectName=raas-v2)
+![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=RaaSV2-Python&libraryName=raas_v2.raasv2_client&projectName=raas_v2)
 
 
 ## How to Test
