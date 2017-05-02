@@ -1,7 +1,10 @@
 # Getting started
 
-## How to Build
+## How to Use
+You can install this package via PIP
+```pip install tangocard-raasv2```
 
+## How to Build
 
 You must have Python 2 >=2.7.9 or Python 3 >=3.4 installed on your system to install and run this SDK. This SDK package depends on other Python packages like nose, jsonpickle etc. 
 These dependencies are defined in the ```requirements.txt``` file that comes with the SDK.
