@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    raas-v2.models.raa_s_5_xx_error_model
+    raas-v2.models.raas_5xx_error_model
 
     This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
 """

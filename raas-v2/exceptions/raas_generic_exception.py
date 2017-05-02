@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 
 """
-    raas-v2.models.raa_s_5_xx_exception
+    raas-v2.models.raas_generic_exception
 
     This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
 """
 import dateutil.parser
 from ..api_helper import APIHelper
 import raas-v2.exceptions.api_exception
-import raas-v2.models.raa_s_5_xx_error
 
-class RaaS5xxException(raas-v2.exceptions.api_exception.APIException):
+class RaaSGenericException(raas-v2.exceptions.api_exception.APIException):
     def __init__(self, reason, context):
-        """Constructor for the RaaS5xxException class
+        """Constructor for the RaaSGenericException class
 
         Args:
             reason (string): The reason (or error message) for the Exception
@@ -20,7 +19,7 @@ class RaaS5xxException(raas-v2.exceptions.api_exception.APIException):
             context (HttpContext):  The HttpContext of the API call.
 
         """
-        super(RaaS5xxException, self).__init__(reason, context)
+        super(RaaSGenericException, self).__init__(reason, context)
         dictionary = APIHelper.json_deserialize(self.context.response.raw_body)
         if isinstance(dictionary, dict):
             self.unbox(dictionary)
@@ -39,8 +38,4 @@ class RaaS5xxException(raas-v2.exceptions.api_exception.APIException):
         self.path = dictionary.get("path")
         self.http_code = dictionary.get("httpCode")
         self.http_phrase = dictionary.get("httpPhrase")
-        self.errors = None
-        if dictionary.get("errors") != None:
-            self.errors = list()
-            for structure in dictionary.get("errors"):
-                self.errors.append(raas-v2.models.raa_s_5_xx_error.RaaS5xxErrorModel.from_dictionary(structure))
+        self.message = dictionary.get("message")

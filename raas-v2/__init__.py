@@ -6,5 +6,5 @@ __all__ = [
     'http',
     'exceptions',
     'decorators',
-    'raa_sv_2_client',
+    'raasv2_client',
 ]

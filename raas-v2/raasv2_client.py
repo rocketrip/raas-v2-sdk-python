@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    raas-v2.raa_sv_2_client
+    raas-v2.raasv2_client
 
     This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io ).
 """

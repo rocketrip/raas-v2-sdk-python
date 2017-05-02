@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 
 """
-    raas-v2.models.raa_s_4_xx_exception
+    raas-v2.models.raas_4xx_exception
 
     This file was automatically generated for Tango Card, Inc. by APIMATIC v2.0 ( https://apimatic.io )
 """
 import dateutil.parser
 from ..api_helper import APIHelper
 import raas-v2.exceptions.api_exception
-import raas-v2.models.raa_s_4_xx_error
+import raas-v2.models.raas_4xx_error
 
 class RaaS4xxException(raas-v2.exceptions.api_exception.APIException):
     def __init__(self, reason, context):
@@ -43,4 +43,4 @@ class RaaS4xxException(raas-v2.exceptions.api_exception.APIException):
         if dictionary.get("errors") != None:
             self.errors = list()
             for structure in dictionary.get("errors"):
-                self.errors.append(raas-v2.models.raa_s_4_xx_error.RaaS4xxErrorModel.from_dictionary(structure))
+                self.errors.append(raas-v2.models.raas_4xx_error.RaaS4xxErrorModel.from_dictionary(structure))

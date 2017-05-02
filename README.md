@@ -55,10 +55,10 @@ Name it "testsdk"
 In your python file you will be required to import the generated python library using the following code lines
 
 ```Python
-from raas-v2.raa_sv_2_client import *
+from raas-v2.raasv2_client import *
 ```
 
-![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=RaaSV2-Python&libraryName=raas-v2.raa_sv_2_client&projectName=raas-v2)
+![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=RaaSV2-Python&libraryName=raas-v2.raasv2_client&projectName=raas-v2)
 
 After this you can write code to instantiate an API client object, get a controller object and  make API calls. Sample code is given in the subsequent sections.
 
@@ -66,7 +66,7 @@ After this you can write code to instantiate an API client object, get a control
 
 To run the file within your test project, right click on your Python file inside your Test project and click on ```Run```
 
-![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=RaaSV2-Python&libraryName=raas-v2.raa_sv_2_client&projectName=raas-v2)
+![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=RaaSV2-Python&libraryName=raas-v2.raasv2_client&projectName=raas-v2)
 
 
 ## How to Test

@@ -9,9 +9,9 @@
 from ..api_helper import APIHelper
 from ..http.http_context import HttpContext
 from ..http.requests_client import RequestsClient
-from ..exceptions.raa_s_4_xx_exception import RaaS4xxException
-from ..exceptions.raa_s_generic_exception import RaaSGenericException
-from ..exceptions.raa_s_5_xx_exception import RaaS5xxException
+from ..exceptions.raas_4xx_exception import RaaS4xxException
+from ..exceptions.raas_generic_exception import RaaSGenericException
+from ..exceptions.raas_5xx_exception import RaaS5xxException
 
 class BaseController(object):
 
