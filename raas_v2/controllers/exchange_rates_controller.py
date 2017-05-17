@@ -11,6 +11,7 @@ from .base_controller import BaseController
 from ..api_helper import APIHelper
 from ..configuration import Configuration
 from ..http.auth.basic_auth import BasicAuth
+from ..models.exchange_rate_response_model import ExchangeRateResponseModel
 
 class ExchangeRatesController(BaseController):
 
@@ -26,7 +27,7 @@ class ExchangeRatesController(BaseController):
         Retrieve current exchange rates
 
         Returns:
-            void: Response from the API. 
+            ExchangeRateResponseModel: Response from the API.
 
         Raises:
             APIException: When an error occurs while fetching the data from
@@ -37,19 +38,21 @@ class ExchangeRatesController(BaseController):
         """
         try:
             self.logger.info('get_exchange_rates called.')
-    
+
             # Prepare query URL
             self.logger.info('Preparing query URL for get_exchange_rates.')
             _query_builder = Configuration.get_base_uri()
-            _query_builder += '/exchangerate'
+            _query_builder += '/exchangerates'
             _query_url = APIHelper.clean_url(_query_builder)
-    
+
             # Prepare and execute request
             self.logger.info('Preparing and executing request for get_exchange_rates.')
             _request = self.http_client.get(_query_url)
             BasicAuth.apply(_request)
             _context = self.execute_request(_request, name = 'get_exchange_rates')
             self.validate_response(_context)
+
+            return APIHelper.json_deserialize(_context.response.raw_body, ExchangeRateResponseModel.from_dictionary)
 
         except Exception as e:
             self.logger.error(e, exc_info = True)
