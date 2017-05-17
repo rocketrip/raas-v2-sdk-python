@@ -6,7 +6,7 @@ You can install this package via PIP
 
 ## How to Build
 
-You must have Python 2 >=2.7.9 or Python 3 >=3.4 installed on your system to install and run this SDK. This SDK package depends on other Python packages like nose, jsonpickle etc. 
+You must have Python 2 >=2.7.9 or Python 3 >=3.4 installed on your system to install and run this SDK. This SDK package depends on other Python packages like nose, jsonpickle etc.
 These dependencies are defined in the ```requirements.txt``` file that comes with the SDK.
 To resolve these dependencies, you can use the PIP Dependency manager. Install it by following steps at [https://pip.pypa.io/en/stable/installing/](https://pip.pypa.io/en/stable/installing/).
 
@@ -46,7 +46,7 @@ Create a new directory by right clicking on the solution name as shown below:
 Name the directory as "test"
 
 ![Add a new project in PyCharm - Step 2](https://apidocs.io/illustration/python?step=nameDirectory)
-   
+
 Add a python file to this project with the name "testsdk"
 
 ![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=createFile&workspaceFolder=RaaSV2-Python&projectName=raas_v2)
@@ -391,8 +391,15 @@ An instance of the ``` CatalogController ``` class can be accessed from the API 
 > Get Catalog
 
 ```python
-def get_catalog(self)
+def get_catalog(self,
+                   verbose=True)
 ```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| verbose |  ``` Optional ```  | Verbose Payload |
 
 #### Example Usage
 
@@ -446,7 +453,7 @@ An instance of the ``` StatusController ``` class can be accessed from the API C
 
 #### <a name="get_system_status"></a>![Method: ](https://apidocs.io/img/method.png ".StatusController.get_system_status") get_system_status
 
-> *Tags:*  ``` Skips Authentication ``` 
+> *Tags:*  ``` Skips Authentication ```
 
 > Retrieve system status
 
@@ -547,6 +554,3 @@ result = customers_client.get_all_customers()
 
 
 [Back to List of Controllers](#list_of_controllers)
-
-
-

@@ -21,20 +21,13 @@ class CatalogController(BaseController):
         super(CatalogController, self).__init__(client, call_back)
         self.logger = logging.getLogger(__name__)
 
-    def get_catalog(self, options=dict()):
+    def get_catalog(self, verbose=True):
         """Does a GET request to /catalogs.
 
         Get Catalog
 
         Args:
-            options (dict, optional): Key-value pairs for any of the
-                parameters to this API Endpoint. All parameters to the
-                endpoint are supplied through the dictionary with their names
-                being the key and their desired values being the value. A list
-                of parameters that can be used are::
-
-                    verbose -- bool -- TODO: type description
-                        here.
+            verbose (bool, optional): Verbose Payload
 
         Returns:
             CatalogModel: Response from the API.
@@ -55,7 +48,7 @@ class CatalogController(BaseController):
             _query_builder += '/catalogs'
             _query_url = APIHelper.clean_url(_query_builder)
             _query_parameters = {
-                'verbose': options.get('verbose', True),
+                'verbose': verbose,
             }
 
             # Prepare headers
