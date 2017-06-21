@@ -41,12 +41,13 @@ class RaaSV2Client(object):
         return CustomersController()
 
 
-    def __init__(self, 
+    def __init__(self,
                  platform_name = 'QAPlatform2',
-                 platform_key = 'apYPfT6HNONpDRUj3CLGWYt7gvIHONpDRUYPfT6Hj'):
+                 platform_key = 'apYPfT6HNONpDRUj3CLGWYt7gvIHONpDRUYPfT6Hj',
+                 environment = 0):
         if platform_name != None:
             Configuration.platform_name = platform_name
         if platform_key != None:
             Configuration.platform_key = platform_key
-
-
+        if environment != None:
+            Configuration.environment = environment
