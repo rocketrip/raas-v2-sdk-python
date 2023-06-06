@@ -56,6 +56,7 @@ class OrderModel(object):
         "external_ref_id" : "externalRefID",
         "message" : "message",
         "notes" : "notes",
+        "etid": "etid",
         "recipient" : "recipient",
         "sender" : "sender"
     }
@@ -77,6 +78,7 @@ class OrderModel(object):
                  external_ref_id=None,
                  message=None,
                  notes=None,
+                 etid=None,
                  recipient=None,
                  sender=None):
         """Constructor for the OrderModel class"""
@@ -98,6 +100,7 @@ class OrderModel(object):
         self.external_ref_id = external_ref_id
         self.message = message
         self.notes = notes
+        self.etid = etid
         self.recipient = recipient
         self.sender = sender
 
@@ -136,6 +139,7 @@ class OrderModel(object):
         external_ref_id = dictionary.get("externalRefID")
         message = dictionary.get("message")
         notes = dictionary.get("notes")
+        etid = dictionary.get("etid")
         recipient = raas_v2.models.name_email_model.NameEmailModel.from_dictionary(dictionary.get("recipient")) if dictionary.get("recipient") else None
         sender = raas_v2.models.name_email_model.NameEmailModel.from_dictionary(dictionary.get("sender")) if dictionary.get("sender") else None
 
@@ -156,6 +160,7 @@ class OrderModel(object):
                    external_ref_id,
                    message,
                    notes,
+                   etid,
                    recipient,
                    sender)
 

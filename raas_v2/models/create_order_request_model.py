@@ -42,7 +42,8 @@ class CreateOrderRequestModel(object):
         "message" : "message",
         "recipient" : "recipient",
         "sender" : "sender",
-        "notes" : "notes"
+        "notes" : "notes",
+        "etid" : "etid"
     }
 
     def __init__(self,
@@ -57,7 +58,8 @@ class CreateOrderRequestModel(object):
                  message=None,
                  recipient=None,
                  sender=None,
-                 notes=None):
+                 notes=None,
+                 etid=None):
         """Constructor for the CreateOrderRequestModel class"""
 
         # Initialize members of the class
@@ -73,6 +75,7 @@ class CreateOrderRequestModel(object):
         self.recipient = recipient
         self.sender = sender
         self.notes = notes
+        self.etid = etid
 
 
     @classmethod
@@ -105,6 +108,7 @@ class CreateOrderRequestModel(object):
         recipient = raas_v2.models.name_email_model.NameEmailModel.from_dictionary(dictionary.get("recipient")) if dictionary.get("recipient") else None
         sender = raas_v2.models.name_email_model.NameEmailModel.from_dictionary(dictionary.get("sender")) if dictionary.get("sender") else None
         notes = dictionary.get("notes")
+        etid = dictionary.get("etid")
 
         # Return an object of this model
         return cls(account_identifier,
@@ -118,6 +122,7 @@ class CreateOrderRequestModel(object):
                    message,
                    recipient,
                    sender,
-                   notes)
+                   notes,
+                   etid)
 
 
