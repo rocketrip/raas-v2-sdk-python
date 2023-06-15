@@ -302,14 +302,15 @@ class OrdersController(BaseController):
             # Prepare headers
             self.logger.info('Preparing headers for create_resend_order.')
             _headers = {
-                'accept': 'application/json'
+                'accept': 'application/json',
+                'content-type': 'application/json; charset=utf-8'
             }
             _params = {'newEmail': email}
             # Prepare and execute request
             self.logger.info('Preparing and executing request for create_resend_order.')
-            _request = self.http_client.post(_query_url, headers=_headers, parameters=_params)
+            _request = self.http_client.post(_query_url, headers=_headers, parameters=APIHelper.json_serialize(_params))
             BasicAuth.apply(_request)
-            _context = self.execute_request(_request, name = 'create_resend_order')
+            _context = self.execute_request(_request, name = 'create_resend_order_new_email')
             self.validate_response(_context)
     
             # Return appropriate type
